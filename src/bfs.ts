@@ -19,9 +19,10 @@ function BFS({ graph, start, target }: BFSInput): boolean {
     return false;
   }
 
-  let queue: string[] = [start];
+  //   initialize the queue with the start node
+  const queue: string[] = [start];
   //   the Set data structure ensures only distinct elements are stored, and it's more effecient for lookups O(1) especially with large data sets since it implements a hash table internally, which means it can compute the memory @ of the element using the hash function at a constant time
-  let visited = new Set<string>([start]);
+  const visited = new Set<string>([start]);
 
   while (queue.length > 0) {
     // shift(): if array is empty it returns undefined else it returns & removes the index 0 element of the array (used as dequeue)

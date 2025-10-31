@@ -1,6 +1,7 @@
 // EXO: 01
 
-import { type Graph, graph } from "./static.js";
+import { graph } from "./static.js";
+import type { Graph } from "./types.js";
 import { printGraph } from "./utils.js";
 
 // Printing the nodes and their children

@@ -1,8 +1,6 @@
-export interface Graph {
-  [key: string]: string[];
-}
-
 // We define the Graph
+
+import type { Graph } from "./types.js";
 
 export const graph: Graph = {
   A: ["G", "B", "E", "J"],

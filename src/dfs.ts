@@ -1,7 +1,7 @@
 import { graph } from "./static.js";
 import type { Graph } from "./types.js";
 
-interface DFSInput {
+export interface DFSInput {
   graph: Graph;
   start: string;
   target: string;
@@ -24,13 +24,13 @@ function DFS({ graph, start, target }: DFSInput): boolean {
   while (stack.length > 0) {
     // pop the top node of the stack
     const node = stack.pop()!;
-
-    // if that nodeis the target => return true
+    console.log(node);
+    // if that node is the target => return true
     if (node === target) return true;
 
     // if poped node wasn't the target, itterate over it's neighbors
     for (const neighbor of graph[node] || []) {
-      // if a neighbor wasn't visited before => makre is as visited && push it to the stack
+      // if a neighbor wasn't visited before => mark it as visited && push it to the stack
       if (!vistied.has(neighbor)) {
         vistied.add(neighbor);
         stack.push(neighbor);
